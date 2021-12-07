@@ -14,6 +14,8 @@ blue=`tput setaf 4`
 gray=`tput setaf 2`
 reset=`tput sgr0`
 
+curl='/usr/bin/curl'
+
 # Prints a line with color using terminal codes
 style_print() {
   echo -e "${!2}$1${reset}"

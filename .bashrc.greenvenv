@@ -1,6 +1,6 @@
 #!/bin/bash
 
-function greenvenv_loadcolors()
+function greenvenv_loadconsts()
 {
 	# Terminal colors
 BLACK=$(tput setaf 0)
@@ -20,6 +20,7 @@ REVERSE=$(tput smso)
 UNDERLINE=$(tput smul)
 BOLD=$(tput bold)
 greenvenv_txt_indexing='When you could not found what you are looking for you might to update index: "sudo updatedb" '
+greenvenv_txt_bye="Bye!"
 }
 # Prints a line with color using terminal codes
 function greenvenv_print()
@@ -50,7 +51,7 @@ files=(`locate --regex "bin/activate"$ | sed 's/bin\/activate$//'`)
 PS3='Select a env to activate, or 0 to exit: '
 select file in "${files[@]}"; do
 	if [[ $REPLY == "0" ]]; then
-		echo 'Bye!'
+		echo greenvenv_txt_bye
 		break
 	elif [[ -z $file ]]; then
 		greenvenv_print 'Invalid choice, try again' RED
@@ -78,7 +79,7 @@ select file in "${files[@]}"; do
 	echo ""
 	if [[ $REPLY == "0" ]]; then
 		greenvenv_print greenvenv_txt_indexing YELLOW
-		echo 'Bye!'
+		echo greenvenv_txt_bye
 		break
 	elif [[ -z $file ]]; then
 		greenvenv_print greenvenv_txt_indexing YELLOW
