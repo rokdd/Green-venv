@@ -7,4 +7,4 @@
  
 ## How to install
 
-To run the benchmark paste/type: sudo curl https://raw.githubusercontent.com/TheRemote/PiBenchmarks/master/Storage.sh | sudo bash
+To run the benchmark paste/type: ´sudo curl https://raw.githubusercontent.com/rokdd/green-venv/master/install.sh | sudo bash´
