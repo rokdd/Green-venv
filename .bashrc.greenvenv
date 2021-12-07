@@ -43,7 +43,7 @@ done
 
 function chenv()
 {
-	greenvenv_loadconsts()
+	greenvenv_loadconsts
 #locate bases on a database which is daily updated. to manually update: sudo updatedb
 files=(`locate --regex "bin/activate"$ | sed 's/bin\/activate$//'`)
 
@@ -63,12 +63,12 @@ select file in "${files[@]}"; do
 		break
 	fi
 done
-greenvenv_cleanup()
+greenvenv_cleanup
 }
 
 function chdjango()
 {
-	greenvenv_loadconsts()
+	greenvenv_loadconsts
 
 #locate bases on a database which is daily updated. to manually update: sudo updatedb
 files=(`locate --regex "/home/.*/manage.py"$ | sed 's/manage.py$//'`)
@@ -133,6 +133,6 @@ select file in "${files[@]}"; do
 		break
 	fi
 done
-greenvenv_cleanup()
+greenvenv_cleanup
 greenvenv_print greenvenv_txt_indexing YELLOW
 }
