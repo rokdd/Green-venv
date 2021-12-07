@@ -19,6 +19,6 @@ style_print() {
   echo -e "${!2}$1${reset}"
 }
 
-style_print "Installed the green virtual environment for you! There: ~" 'gray'
-sudo curl https://raw.githubusercontent.com/rokdd/green-venv/master/.bashrc.greenvenv > ~/.bashrc.greenvenv
+style_print "Installed the green virtual environment for you! There: $~" 'gray'
+sudo curl -o ~/.bashrc.greenvenv https://raw.githubusercontent.com/rokdd/green-venv/master/.bashrc.greenvenv
 sudo grep -qxF '[ -f $HOME/.bashrc.greenvenv ] && . $HOME/.bashrc.greenvenv' ~/.bashrc || echo -e "\n#this line activate the green-venv\n[ -f \$HOME/.bashrc.greenvenv ] && . \$HOME/.bashrc.greenvenv" >> ~/.bashrc
