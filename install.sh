@@ -20,5 +20,5 @@ style_print() {
 }
 
 style_print "Installed the green virtual environment for you! There: ~" 'gray'
-sudo curl https://raw.githubusercontent.com/rokdd/green-venv/master/install.sh > ~/.bashrc.greenenv
-sudo grep -qxF '[ -f $HOME/.bashrc.greenenv ] && . $HOME/.bashrc.greenenv' ~/.bashrc || echo -e "\n#this line activate the green-venv\n[ -f \$HOME/.bashrc.greenenv ] && . \$HOME/.bashrc.greenenv" >> ~/.bashrc
+sudo curl https://raw.githubusercontent.com/rokdd/green-venv/master/.bashrc.greenvenv > ~/.bashrc.greenvenv
+sudo grep -qxF '[ -f $HOME/.bashrc.greenvenv ] && . $HOME/.bashrc.greenvenv' ~/.bashrc || echo -e "\n#this line activate the green-venv\n[ -f \$HOME/.bashrc.greenvenv ] && . \$HOME/.bashrc.greenvenv" >> ~/.bashrc
