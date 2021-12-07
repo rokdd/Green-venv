@@ -6,28 +6,19 @@
 # sudo curl https://raw.githubusercontent.com/rokdd/green-venv/master/install.sh | sudo bash
 
 # Terminal colors
-BLACK=$(tput setaf 0)
-RED=$(tput setaf 1)
-GREEN=$(tput setaf 2)
-YELLOW=$(tput setaf 3)
-LIME_YELLOW=$(tput setaf 190)
-POWDER_BLUE=$(tput setaf 153)
-BLUE=$(tput setaf 4)
-MAGENTA=$(tput setaf 5)
-CYAN=$(tput setaf 6)
-WHITE=$(tput setaf 7)
-BRIGHT=$(tput bold)
-NORMAL=$(tput sgr0)
-BLINK=$(tput blink)
-REVERSE=$(tput smso)
-UNDERLINE=$(tput smul)
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[0;33m'
+BLUE='\033[0;34m'
+GRAY='\033[0;30m'
 
+NC='\033[0m' # No Color
 # Prints a line with color using terminal codes
 style_print() {
-  printf "%s\n" "${2}$1${NORMAL}"
+  printf "%s\n" "${2}$1${NC}"
 }
 
 style_print "test for normal"
-style_print "test for green" "GREEN"
+style_print "test for green" GREEN
 
 grep -qxF '[ -f $HOME/.bashrc.greenenv ] && . $HOME/.bashrc.greenenv' $HOME/.bashrc || echo '[ -f $HOME/.bashrc.greenenv ] && . $HOME/.bashrc.greenenv' >> $HOME/.bashrc
