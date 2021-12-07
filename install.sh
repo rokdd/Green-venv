@@ -3,7 +3,7 @@
 # Organise your virtual environments with happyness
 #
 # To install the script use the following command:
-# sudo curl https://raw.githubusercontent.com/TheRemote/PiBenchmarks/master/Storage.sh | sudo bash
+# sudo curl https://raw.githubusercontent.com/rokdd/green-venv/master/install.sh | sudo bash
 
 # Terminal colors
 BLACK=$(tput setaf 0)
@@ -30,4 +30,4 @@ style_print() {
 style_print "test for normal"
 style_print "test for green" "GREEN"
 
-grep -qxF '[ -f $HOME/.bashrc.greenenv ] && . $HOME/.bashrc.greenenv' .bashrc || echo '[ -f $HOME/.bashrc.greenenv ] && . $HOME/.bashrc.greenenv' >> .bashrc
+grep -qxF '[ -f $HOME/.bashrc.greenenv ] && . $HOME/.bashrc.greenenv' $HOME/.bashrc || echo '[ -f $HOME/.bashrc.greenenv ] && . $HOME/.bashrc.greenenv' >> $HOME/.bashrc
