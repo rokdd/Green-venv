@@ -18,10 +18,13 @@ NORMAL=$(tput sgr0)
 BLINK=$(tput blink)
 REVERSE=$(tput smso)
 UNDERLINE=$(tput smul)
+BOLD=$(tput bold)
+greenvenv_txt_indexing='When you could not found what you are looking for you might to update index: "sudo updatedb" '
 }
 # Prints a line with color using terminal codes
 function greenvenv_print()
-  printf "%s\n" "${2}$1${NORMAL}"
+{
+  printf "%s\n" "${!2}$1${NORMAL}"
 
 }
 
@@ -30,9 +33,17 @@ function greenvenv_find()
 
 }
 
+function greenvenv_cleanup()
+{
+	for var in "${!greenvenv_@}"; do
+    unset "${!var}"
+done
+
+}
+
 function chenv()
 {
-	greenvenv_loadcolors()
+	greenvenv_loadconsts()
 #locate bases on a database which is daily updated. to manually update: sudo updatedb
 files=(`locate --regex "bin/activate"$ | sed 's/bin\/activate$//'`)
 
@@ -42,22 +53,23 @@ select file in "${files[@]}"; do
 		echo 'Bye!'
 		break
 	elif [[ -z $file ]]; then
-		echo 'Invalid choice, try again'
+		greenvenv_print 'Invalid choice, try again' RED
 		break
 	else
-		echo 'Deactivate current env..'
+		echo 'Deactivate current env..' 
 		deactivate
-		greenvenv_print 'Activate choosen env..'
+		greenvenv_print 'Activate choosen environment.. Enjoy' GREEN
 		source "${file}bin/activate"
 		break
 	fi
 done
+greenvenv_cleanup()
 }
 
-function chproj()
+function chdjango()
 {
-	greenvenv_loadcolors()
-#!/bin/bash
+	greenvenv_loadconsts()
+
 #locate bases on a database which is daily updated. to manually update: sudo updatedb
 files=(`locate --regex "/home/.*/manage.py"$ | sed 's/manage.py$//'`)
 shopt -s expand_aliases
@@ -65,10 +77,12 @@ PS3='Select a django project, or 0 to exit: '
 select file in "${files[@]}"; do
 	echo ""
 	if [[ $REPLY == "0" ]]; then
+		greenvenv_print greenvenv_txt_indexing YELLOW
 		echo 'Bye!'
 		break
 	elif [[ -z $file ]]; then
-		echo 'Invalid choice, try again'
+		greenvenv_print greenvenv_txt_indexing YELLOW
+		greenvenv_print 'Invalid choice, try again' RED
 		break
 	else
 		#change to the directory of the project
@@ -77,7 +91,7 @@ select file in "${files[@]}"; do
 		#based on https://stackoverflow.com/questions/45216663/how-to-automatically-activate-virtualenvs-when-cding-into-a-directory
 		venv_cfg_filepath=$(find . -maxdepth 2 -type f -name 'pyvenv.cfg' 2> /dev/null)
 		if [[ -z "$venv_cfg_filepath" ]]; then
-			echo "no config file found. Please locate pyvenv.cfg in the same directory"
+			greenvenv_print "no config file found. Please locate pyvenv.cfg in the same directory" RED
 			return # no config file found
 		fi
 
@@ -90,7 +104,7 @@ select file in "${files[@]}"; do
 			
 			[ "$(type -t deactivate)" = "function" ] && echo "- Deactivate current one" && deactivate nondestructive
 			fi
-			echo "- Activate $venv"
+			greenvenv_print "- Activate $venv" GREEN
 			
 			source "${venv}"/bin/activate
 			#cmd_restart=$(awk -F"=" '/^cmd_restart/{print $2}' ${venv_cfg_filepath})
@@ -119,4 +133,6 @@ select file in "${files[@]}"; do
 		break
 	fi
 done
+greenvenv_cleanup()
+greenvenv_print greenvenv_txt_indexing YELLOW
 }

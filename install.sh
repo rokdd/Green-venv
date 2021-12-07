@@ -9,14 +9,17 @@
 
 red=`tput setaf 1`
 green=`tput setaf 2`
+yellow=`tput setaf 2`
+blue=`tput setaf 4`
+gray=`tput setaf 2`
 reset=`tput sgr0`
 
 # Prints a line with color using terminal codes
 style_print() {
-  echo "${2}$1${reset}"
+  echo -e "${!2}$1${reset}"
 }
 
-style_print "test for normal"
-style_print "test for green" 'green'
+style_print "Installed the green virtual environment for you!" 'gray'
 
 grep -qxF '[ -f $HOME/.bashrc.greenenv ] && . $HOME/.bashrc.greenenv' $HOME/.bashrc || echo '[ -f $HOME/.bashrc.greenenv ] && . $HOME/.bashrc.greenenv' >> $HOME/.bashrc
+rm install.sh
