@@ -30,7 +30,7 @@ function greenvenv_print()
 
 function greenvenv_find()
 {
-
+echo ""
 }
 
 function greenvenv_cleanup()
