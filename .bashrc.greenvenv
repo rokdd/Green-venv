@@ -3,29 +3,29 @@
 function greenvenv_loadconsts()
 {
 	# Terminal colors
-BLACK=$(tput setaf 0)
-RED=$(tput setaf 1)
-GREEN=$(tput setaf 2)
-YELLOW=$(tput setaf 3)
-LIME_YELLOW=$(tput setaf 190)
-POWDER_BLUE=$(tput setaf 153)
-BLUE=$(tput setaf 4)
-MAGENTA=$(tput setaf 5)
-CYAN=$(tput setaf 6)
-WHITE=$(tput setaf 7)
-BRIGHT=$(tput bold)
-NORMAL=$(tput sgr0)
-BLINK=$(tput blink)
-REVERSE=$(tput smso)
-UNDERLINE=$(tput smul)
-BOLD=$(tput bold)
-greenvenv_txt_indexing='When you could not found what you are looking for you might to update index: "sudo updatedb" '
-greenvenv_txt_bye="Bye!"
+GREENVENV_CLR_BLACK=$(tput setaf 0)
+GREENVENV_CLR_RED=$(tput setaf 1)
+GREENVENV_CLR_GREEN=$(tput setaf 2)
+GREENVENV_CLR_YELLOW=$(tput setaf 3)
+GREENVENV_CLR_LIME_YELLOW=$(tput setaf 190)
+GREENVENV_CLR_POWDER_BLUE=$(tput setaf 153)
+GREENVENV_CLR_BLUE=$(tput setaf 4)
+GREENVENV_CLR_MAGENTA=$(tput setaf 5)
+GREENVENV_CLR_CYAN=$(tput setaf 6)
+GREENVENV_CLR_WHITE=$(tput setaf 7)
+GREENVENV_CLR_BRIGHT=$(tput bold)
+GREENVENV_CLR_NORMAL=$(tput sgr0)
+GREENVENV_CLR_BLINK=$(tput blink)
+GREENVENV_CLR_REVERSE=$(tput smso)
+GREENVENV_CLR_UNDERLINE=$(tput smul)
+GREENVENV_CLR_BOLD=$(tput bold)
+GREENVENV_TXT_INDEXING='When you could not found what you are looking for you might to update index: "sudo updatedb" '
+GREENVENV_TXT_BYE="Bye!"
 }
 # Prints a line with color using terminal codes
 function greenvenv_print()
 {
-  printf "%s\n" "${!2}$1${NORMAL}"
+  printf "%s\n" "${!2}$1${GREENVENV_CLR_NORMAL}"
 
 }
 
@@ -36,8 +36,8 @@ echo ""
 
 function greenvenv_cleanup()
 {
-	for var in "${!greenvenv_@}"; do
-    unset "${!var}"
+	for var in "${!GREENVENV_@}"; do
+    unset ${var}
 done
 
 }
@@ -51,15 +51,17 @@ files=(`locate --regex "bin/activate"$ | sed 's/bin\/activate$//'`)
 PS3='Select a env to activate, or 0 to exit: '
 select file in "${files[@]}"; do
 	if [[ $REPLY == "0" ]]; then
-		echo greenvenv_txt_bye
+		greenvenv_print $GREENVENV_TXT_INDEXING GREENVENV_CLR_YELLOW
+		echo $GREENVENV_TXT_BYE
 		break
 	elif [[ -z $file ]]; then
-		greenvenv_print 'Invalid choice, try again' RED
+		greenvenv_print $GREENVENV_TXT_INDEXING GREENVENV_CLR_YELLOW
+		greenvenv_print 'Invalid choice, try again' GREENVENV_CLR_RED
 		break
 	else
 		echo 'Deactivate current env..' 
 		deactivate
-		greenvenv_print 'Activate choosen environment.. Enjoy' GREEN
+		greenvenv_print 'Activate choosen environment.. Enjoy' GREENVENV_CLR_GREEN
 		source "${file}bin/activate"
 		break
 	fi
@@ -73,17 +75,16 @@ function chdjango()
 
 #locate bases on a database which is daily updated. to manually update: sudo updatedb
 files=(`locate --regex "/home/.*/manage.py"$ | sed 's/manage.py$//'`)
-shopt -s expand_aliases
 PS3='Select a django project, or 0 to exit: '
 select file in "${files[@]}"; do
 	echo ""
 	if [[ $REPLY == "0" ]]; then
-		greenvenv_print greenvenv_txt_indexing YELLOW
-		echo greenvenv_txt_bye
+		greenvenv_print $GREENVENV_TXT_INDEXING GREENVENV_CLR_YELLOW
+		echo $GREENVENV_TXT_BYE
 		break
 	elif [[ -z $file ]]; then
-		greenvenv_print greenvenv_txt_indexing YELLOW
-		greenvenv_print 'Invalid choice, try again' RED
+		greenvenv_print $GREENVENV_TXT_INDEXING GREENVENV_CLR_YELLOW
+		greenvenv_print 'Invalid choice, try again' GREENVENV_CLR_RED
 		break
 	else
 		#change to the directory of the project
@@ -92,7 +93,7 @@ select file in "${files[@]}"; do
 		#based on https://stackoverflow.com/questions/45216663/how-to-automatically-activate-virtualenvs-when-cding-into-a-directory
 		venv_cfg_filepath=$(find . -maxdepth 2 -type f -name 'pyvenv.cfg' 2> /dev/null)
 		if [[ -z "$venv_cfg_filepath" ]]; then
-			greenvenv_print "no config file found. Please locate pyvenv.cfg in the same directory" RED
+			greenvenv_print "no config file found. Please locate pyvenv.cfg in the same directory" GREENVENV_CLR_RED
 			return # no config file found
 		fi
 
@@ -105,7 +106,7 @@ select file in "${files[@]}"; do
 			
 			[ "$(type -t deactivate)" = "function" ] && echo "- Deactivate current one" && deactivate nondestructive
 			fi
-			greenvenv_print "- Activate $venv" GREEN
+			greenvenv_print "- Activate $venv" GREENVENV_CLR_GREEN
 			
 			source "${venv}"/bin/activate
 			#cmd_restart=$(awk -F"=" '/^cmd_restart/{print $2}' ${venv_cfg_filepath})
@@ -113,10 +114,15 @@ select file in "${files[@]}"; do
 			alias_restart="python ${file}manage.py makemigrations && python ${file}manage.py migrate && python ${file}manage.py collectstatic --no-input"
 			if [[ ! -z "$cmd_restart" ]]; then
 				alias_restart+=" && ${cmd_restart}"
+				
+				if [[ ! -z "$cmd_restart_beep" ]]; then 
+					alias_restart+=' && echo -e "\07" && echo -e "\007" '
+				fi
 			fi
-			alias_restart+=' && echo -e "\07" && echo -e "\007" '
 			alias restart="${alias_restart}"
-			echo "- Alias 'restart': \"migrate and restart django: ${alias_restart}\""
+			echo "- Alias '${GREENVENV_CLR_BOLD}restart${GREENVENV_CLR_NORMAL}': migrate and restart django: ${alias_restart}\""
+			alias requirements="pip3 freeze > ${file}requirements.txt"
+			echo "- Alias '${GREENVENV_CLR_BOLD}requirements${GREENVENV_CLR_NORMAL}': export requirements.txt"
 			#check for other aliases
 			cat ${venv_cfg_filepath} | awk -F= '/^alias /{print $0}'  | while read line
 				do
@@ -124,16 +130,15 @@ select file in "${files[@]}"; do
 					IFS="="
 					set -- $line
 					IFS="$OLDIFS"
-				    echo "- Alias '${1:6}': $2"
+				    echo "- Alias '${GREENVENV_CLR_BOLD}${1:6}${GREENVENV_CLR_NORMAL}': $2"
 				done
-			echo "- Other Aliases you can register directly in the pyenv"
+			echo "- More Aliases you can register directly in the pyenv"
 		else
-			echo "$venv is not a directory or readable ${venv_cfg_filepath}"
+			greenvenv_print "$venv is not a directory or readable ${venv_cfg_filepath}" GREENVENV_CLR_RED
 		fi
 		
 		break
 	fi
 done
 greenvenv_cleanup
-greenvenv_print greenvenv_txt_indexing YELLOW
 }
