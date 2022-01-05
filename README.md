@@ -10,9 +10,10 @@
  
 ## How to install
 
-To can install into your .bashrc profile by paste: ´sudo curl https://raw.githubusercontent.com/rokdd/green-venv/master/install.sh | sudo bash´
+To install into your .bashrc profile run:
+`curl https://raw.githubusercontent.com/rokdd/green-venv/master/install.sh | bash`
 
-If you find this project useful or promising , You can support us by a github ⭐
+If you find this project useful or promising, you can support us with a github ⭐
 
 ## Other resources
 

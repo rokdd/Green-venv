@@ -1,0 +1,951 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"green",
+				"greenvenv_loadcolors"
+			],
+			[
+				"to_",
+				"to_html"
+			],
+			[
+				"inter",
+				"intervals2"
+			],
+			[
+				"in",
+				"intervals"
+			],
+			[
+				"pa",
+				"params_converted"
+			],
+			[
+				"gro",
+				"group_by"
+			],
+			[
+				"column",
+				"columns2"
+			],
+			[
+				"last_",
+				"last_updated"
+			],
+			[
+				"vi",
+				"views"
+			],
+			[
+				"PRO",
+				"PROJECT_DIR"
+			],
+			[
+				"STATIC",
+				"STATICFILES_DIRS"
+			],
+			[
+				"STA",
+				"STATIC_ROOT"
+			],
+			[
+				"pytho",
+				"python_home"
+			],
+			[
+				"stock",
+				"stockexchange_id"
+			],
+			[
+				"__",
+				"__name__"
+			],
+			[
+				"time",
+				"timedelta"
+			],
+			[
+				"Stock",
+				"StockExchange"
+			],
+			[
+				"curr",
+				"current_price"
+			],
+			[
+				"req",
+				"request"
+			],
+			[
+				"requ",
+				"request_out"
+			],
+			[
+				"get",
+				"get_vars"
+			],
+			[
+				"count",
+				"count_sum"
+			],
+			[
+				"exch",
+				"exchangeId"
+			],
+			[
+				"mapping",
+				"mapping_se"
+			],
+			[
+				"mapp",
+				"mapping_se"
+			],
+			[
+				"degiro",
+				"degirodata"
+			],
+			[
+				"_o",
+				"_oLibrary"
+			],
+			[
+				"obje",
+				"objects"
+			],
+			[
+				"ms",
+				"msgs2"
+			],
+			[
+				"sto",
+				"stockprediction"
+			],
+			[
+				"u",
+				"user_id"
+			],
+			[
+				"is_",
+				"is_portfolio"
+			],
+			[
+				"max",
+				"max_rate"
+			],
+			[
+				"split",
+				"splitratio"
+			],
+			[
+				"spli",
+				"splitratio"
+			],
+			[
+				"symbol",
+				"symbol_yf"
+			],
+			[
+				"co",
+				"columnName"
+			],
+			[
+				"get_",
+				"get_dividends"
+			],
+			[
+				"tab",
+				"table_column_exists"
+			],
+			[
+				"div",
+				"dividends"
+			],
+			[
+				"is",
+				"isinstance"
+			],
+			[
+				"spl",
+				"__split_coefficient"
+			],
+			[
+				"di",
+				"dividend_amount"
+			],
+			[
+				"st",
+				"start_stock"
+			],
+			[
+				"obj",
+				"obj_content"
+			],
+			[
+				"re",
+				"request"
+			],
+			[
+				"ap",
+				"api_key"
+			],
+			[
+				"til",
+				"tilePortfolio"
+			],
+			[
+				"COLOR",
+				"color_cell"
+			],
+			[
+				"your",
+				"your_portfolio"
+			],
+			[
+				"gr",
+				"group_data"
+			],
+			[
+				"o",
+				"oLibrary"
+			],
+			[
+				"stocks",
+				"stocks_data"
+			],
+			[
+				"sum",
+				"sum_rowwise"
+			],
+			[
+				"pos",
+				"positions"
+			],
+			[
+				"curre",
+				"currency"
+			],
+			[
+				"curren",
+				"currency_id"
+			],
+			[
+				"chk",
+				"checknan"
+			],
+			[
+				"start",
+				"start_stock"
+			],
+			[
+				"first",
+				"first_full_week"
+			],
+			[
+				"sums",
+				"sum_start"
+			],
+			[
+				"mis",
+				"minus_weeks"
+			],
+			[
+				"las",
+				"last_refresh"
+			],
+			[
+				"market",
+				"marketclose"
+			],
+			[
+				"data",
+				"dataframe"
+			],
+			[
+				"da",
+				"dataframe"
+			],
+			[
+				"port",
+				"portfolio_liftup"
+			],
+			[
+				"json",
+				"json_data"
+			],
+			[
+				"search",
+				"searchValue"
+			],
+			[
+				"Data",
+				"DataFrame"
+			],
+			[
+				"colu",
+				"column_name"
+			],
+			[
+				"as",
+				"astype"
+			],
+			[
+				"ris",
+				"rsi_daily_10_close"
+			],
+			[
+				"rsi",
+				"rsi_daily_10_close"
+			],
+			[
+				"retu",
+				"return_type"
+			],
+			[
+				"relat",
+				"related_table"
+			],
+			[
+				"rela",
+				"related_table"
+			],
+			[
+				"oper",
+				"operator"
+			],
+			[
+				"date_",
+				"date_predicted"
+			],
+			[
+				"lev",
+				"levels"
+			],
+			[
+				"le",
+				"levels_h"
+			],
+			[
+				"func",
+				"func_name"
+			],
+			[
+				"api",
+				"api_func"
+			],
+			[
+				"wait",
+				"wait_time"
+			],
+			[
+				"date",
+				"datetime"
+			],
+			[
+				"exc",
+				"except"
+			],
+			[
+				"col",
+				"columns"
+			],
+			[
+				"mac",
+				"macd_daily_close"
+			],
+			[
+				"for",
+				"formatters_plain"
+			],
+			[
+				"form",
+				"format_graphics"
+			],
+			[
+				"reso",
+				"resolve_recipients"
+			],
+			[
+				"temp",
+				"template"
+			],
+			[
+				"msg",
+				"msgImage"
+			],
+			[
+				"mail",
+				"mail_templates"
+			],
+			[
+				"Dat",
+				"DataFrame"
+			],
+			[
+				"pr",
+				"PROFILE"
+			],
+			[
+				"class",
+				"classmethod"
+			],
+			[
+				"appen",
+				"append_when"
+			],
+			[
+				"ev",
+				"evaluators"
+			],
+			[
+				"E",
+				"EvaluatorScenario"
+			],
+			[
+				"e",
+				"evaluator"
+			],
+			[
+				"lo",
+				"log_unhandled_exceptions"
+			],
+			[
+				"or",
+				"original_endpoint"
+			],
+			[
+				"con",
+				"constraints"
+			],
+			[
+				"df_",
+				"df_postgres"
+			],
+			[
+				"c",
+				"constraints"
+			],
+			[
+				"cont",
+				"continous"
+			],
+			[
+				"s",
+				"scenario"
+			],
+			[
+				"fetch",
+				"fetchall"
+			],
+			[
+				"rel",
+				"related_table"
+			],
+			[
+				"F",
+				"False"
+			],
+			[
+				"room_",
+				"room__url"
+			],
+			[
+				"photo__b",
+				"photo__buildings_cnt"
+			],
+			[
+				"enu_img",
+				"enum__img_url"
+			],
+			[
+				"place_",
+				"place__img_url"
+			],
+			[
+				"titl",
+				"title_b"
+			],
+			[
+				"ti",
+				"title_b"
+			],
+			[
+				"html",
+				"htmlspecialchars"
+			],
+			[
+				"htm",
+				"htmlspecialchars"
+			],
+			[
+				"cP",
+				"cPHOTO"
+			],
+			[
+				"dbg",
+				"dbgstart\tdbgstop"
+			],
+			[
+				"building_titl",
+				"building_title_alternative"
+			],
+			[
+				"ine",
+				"inline-block\tdisplay"
+			],
+			[
+				"FLEX",
+				"FLEXFIELD_EPOCHE_ID"
+			],
+			[
+				"list",
+				"listing__subtitle"
+			],
+			[
+				"ad",
+				"address_str"
+			],
+			[
+				"geo_",
+				"geo_lat"
+			],
+			[
+				"array_merge",
+				"array_merge_recursive"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 152.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"auto",
+				"Enable Autorefresh"
+			],
+			[
+				"refresh",
+				"Autorefresh: Remember the current setting for this file"
+			],
+			[
+				"refres",
+				"Autorefresh: Remember the current setting for this file"
+			],
+			[
+				"package ",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Remove Package"
+			],
+			[
+				"Snippet: cu",
+				"Snippet: console-pause"
+			],
+			[
+				"sni",
+				"Snippet: console-pause"
+			],
+			[
+				"todore",
+				"TodoReview: Project and Open Files"
+			],
+			[
+				"to",
+				"TodoReview: Project Files"
+			],
+			[
+				"plug",
+				"Preferences: Package Control Settings – User"
+			],
+			[
+				"rei",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"remove ",
+				"Package Control: Remove Package"
+			],
+			[
+				"packa",
+				"Package Control: Disable Package"
+			],
+			[
+				"php",
+				"PHP CodeBeautifier"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"TodoReview: Project Files",
+				"TodoReview: Project Files"
+			],
+			[
+				"compare",
+				"Local History: Compare"
+			],
+			[
+				"show o",
+				"CodeFormatter: Show PHP Transformations"
+			],
+			[
+				"up",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"upda",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"Package Control: inst",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"instalkl",
+				"Package Control: Install Package"
+			],
+			[
+				"packac",
+				"Package Control: Disable Package"
+			],
+			[
+				"ftp",
+				"FTPSync: Browse"
+			],
+			[
+				"hist",
+				"Local History: Open"
+			],
+			[
+				"histo",
+				"Local History: Browse"
+			],
+			[
+				"histor",
+				"Local History: Browse"
+			]
+		],
+		"width": 714.0
+	},
+	"console":
+	{
+		"height": 400.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2deb499853c4371624f5a07e27c334aa' + 'bf8c4e67d14fb0525ba4f89698a6d7e1'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/C/Users/rokdd/Downloads/Download Steiner/bm05-coding"
+	],
+	"file_history":
+	[
+		"/S/.bashrc_greenenv.backup",
+		"/F/start.sh",
+		"/S/.bashrc.greenvenv",
+		"/C/Users/rokdd/AppData/Roaming/Sublime Merge/Packages/User/Commit Message.sublime-settings",
+		"/C/Users/rokdd/Documents/Private Programmierungprojekte/bash/green-venv/Green-venv/README.md",
+		"/S/stock-prediction/fintech/fintech/static/js/stock.js",
+		"/S/stock-prediction/fintech/fintech/static/js/api.js",
+		"/S/stock-prediction/fintech/stockprediction/subviews/tileTypes/tilesGroup.py",
+		"/S/stock-prediction/fintech/stockprediction/subviews/background.py",
+		"/S/stock-prediction/fintech/stockprediction/templates/base.html",
+		"/S/stock-prediction/fintech/static/js/stock.js",
+		"/S/stock-prediction/fintech/stockprediction/templates/page.html",
+		"/S/stock-prediction/scripts/sandbox.py",
+		"/S/stock-prediction/fintech/pyvenv.cfg",
+		"/S/.bashrc_env",
+		"/S/stock-prediction/scripts/support_resistance/pricelevels/visualization/levels_on_candlestick.py",
+		"/S/stock-prediction/fintech/static/76--beta-resistance-support.json",
+		"/S/stock-prediction/fintech/static/1--beta4-resistance-support.json",
+		"/S/stock-prediction/fintech/static/2--beta4-resistance-support.json",
+		"/S/env-homidy/pyvenv.cfg",
+		"/S/homidy/pyvenv.cfg",
+		"/S/stock-prediction/fintech/static/1--beta-resistance-support.json",
+		"/S/stock-prediction/fintech/static/2--beta-resistance-support.json",
+		"/S/stock-prediction/scripts/fintech_classes/usecase_beta.py",
+		"/S/stock-prediction/scripts/worker-test.py",
+		"/S/stock-prediction/fintech/stockprediction/submodels/News.py",
+		"/S/stock-prediction/fintech/fintech/settings.py",
+		"/S/stock-prediction/fintech/stockprediction/templates/import.html",
+		"/S/stock-prediction/fintech/stockprediction/submodels/Stock.py",
+		"/S/stock-prediction/scripts/worker-reporter.py",
+		"/S/stock-prediction/fintech/stockprediction/tools/trading_ig_config.py",
+		"/R/nx2",
+		"/S/stock-prediction/scripts/fintech_classes/yahoo_finance.py",
+		"/S/stock-prediction/fintech/stockprediction/views.py",
+		"/S/stock-prediction/fintech/stockprediction/subviews/tiles.py",
+		"/S/stock-prediction/fintech/stockprediction/models.py",
+		"/S/stock-prediction/fintech/fintech/constants.py",
+		"/S/stock-prediction/scripts/fintech_classes/indicator.py",
+		"/S/stock-prediction/scripts/constants.py",
+		"/S/stock-prediction/scripts/fintech_classes/db.py",
+		"/S/stock-prediction/scripts/fintech_classes/dyn_table.py",
+		"/S/stock-prediction/fintech/cron-continous.sh",
+		"/S/stock-prediction/fintech/manage.py",
+		"/S/stock-prediction/fintech/stockprediction/subviews/format.py",
+		"/S/stock-prediction/scripts/utils.py",
+		"/S/stock-prediction/scripts/fintech_classes/datasource.py",
+		"/S/stock-prediction/fintech/stockprediction/handlers/thread.py",
+		"/S/stock-prediction/fintech/fintech/wsgi.py",
+		"/S/stock-prediction/fintech/fintech/urls.py",
+		"/S/stock-prediction/fintech/homidy/urls.py",
+		"/S/stock-prediction/fintech/homidy/models.py",
+		"/S/stock-prediction/scripts/fintech_classes/alphavintage.py",
+		"/S/stock-prediction/fintech/homidy/serializers.py",
+		"/S/stock-prediction/fintech/homidy/views.py",
+		"/S/stock-prediction/fintech/stockprediction/urls.py",
+		"/S/stock-prediction/scripts/yahoofinancial.py",
+		"/S/stock-prediction/fintech/stockprediction/handlers/ruleset.py",
+		"/S/stock-prediction/fintech/stockprediction/rulesets/ruleset_yahoo_import.py",
+		"/S/stock-prediction/fintech/stockprediction/subviews/tileTypes/tilesBenchmark.py",
+		"/S/stock-prediction/fintech/static/js/masonry.min.js",
+		"/S/stock-prediction/fintech/stockprediction/subviews/helper.py",
+		"/S/stock-prediction/fintech/stockprediction/handlers/stock_group.py",
+		"/S/stock-prediction/fintech/static/js/api.js",
+		"/S/stock-prediction/fintech/static/css/format.layout.css",
+		"/S/stock-prediction/fintech/cron-nightclean.sh",
+		"/S/stock-prediction/fintech/static/js/initter.js",
+		"/S/stock-prediction/fintech/stockprediction/admin.py",
+		"/C/Users/rokdd/AppData/Local/SiriKali/SiriKali/favorites/192.168.155.23-49cc2ddcbb5b064aa6a2ba0794e3bfa7affda9a3b3cb7b4e8f51d38c72ebc85c.json",
+		"/S/stock-prediction/fintech/stockprediction/templates/table.html",
+		"/S/stock-prediction/fintech/cron-continous - Kopie.sh",
+		"/S/stock-prediction/fintech/stockprediction/handlers/fomanticui.py",
+		"/S/stock-prediction/scripts/worker-continous.py",
+		"/S/stock-prediction/fintech/stockprediction/handlers/throttler.py",
+		"/S/stock-prediction/fintech/stockprediction/tools/utils_var.py",
+		"/S/stock-prediction/fintech/stockprediction/subviews/benchmarking.py",
+		"/S/stock-prediction/fintech/stockprediction/handlers/logger.py",
+		"/S/stock-prediction/fintech/stockprediction/subviews/tileTypes/__init__.py",
+		"/S/stock-prediction/fintech/stockprediction/subviews/__init__.py",
+		"/S/stock-prediction/fintech/stockprediction/migrations/0036_stock_outdated_at.py",
+		"/S/stock-prediction/fintech/stockprediction/submodels/Datasource.py",
+		"/S/stock-prediction/ftpsync.settings",
+		"/S/stock-prediction/fintech/cron-django.sh",
+		"/S/stock-prediction/fintech/stockprediction/migrations/0035_stock_currency.py",
+		"/S/stock-prediction/scripts/fintech_classes/openfigi.py",
+		"/S/stock-prediction/fintech/stockprediction/migrations/0028_stock_identifiers.py",
+		"/S/stock-prediction/logs/cron-django.log.txt",
+		"/S/stock-prediction/logs/continous.txt",
+		"/S/stock-prediction/logs/report.txt",
+		"/S/stock-prediction/fintech/cron-django-log2.html",
+		"/S/stock-prediction/fintech/stockprediction/wizard.py",
+		"/S/stock-prediction/fintech/cron-django-log.html",
+		"/S/stock-prediction/fintech/cron-django.log",
+		"/S/stock-prediction/scripts/fintech_classes/matplotlib_image.py",
+		"/S/stock-prediction/fintech/stockprediction/templates/general_template.html",
+		"/C/Users/rokdd/Downloads/BubbleUPnPTetherClient-0.9.2/launch.sh",
+		"/S/stock-prediction/scripts/fintech_classes/trendln2.py",
+		"/S/stock-prediction/scripts/fintech_classes/finance_basic_simple.py",
+		"/S/stock-prediction/scripts/worker.py",
+		"/S/stock-prediction/scripts/fintech_classes/finance_basic.py",
+		"/S/stock-prediction/scripts/fintech_classes/operator.py",
+		"/S/stock-prediction/scripts/fintech_classes/mail.py",
+		"/S/stock-prediction/scripts/worker-earlybird.py",
+		"/S/stock-prediction/scripts/fintech_classes/mail_templates/default_html.j2",
+		"/S/stock-prediction/fintech/stockprediction/resources/datagrid.py",
+		"/S/stock-prediction/scripts/fintech_classes/mail_templates/section_html.j2",
+		"/S/stock-prediction/scripts/fintech_classes/mail_templates/section_plain.j2",
+		"/S/stock-prediction/scripts/fintech_classes/mail_templates/default_plain.j2",
+		"/S/stock-prediction/scripts/fintech_classes/mail_templates/base.j2",
+		"/S/stock-prediction/scripts/fintech_classes/mail_templates/default.j2",
+		"/S/stock-prediction/scripts/fintech_classes/pushbullet.py",
+		"/S/stock-prediction/scripts/fintech_classes/__init__.py",
+		"/C/Users/rokdd/Documents/Eigene-Programmierungprojekte/web/02_P-beta/platform/pages/pg_search_cust.pg.php",
+		"/C/Users/rokdd/Documents/Eigene-Programmierungprojekte/web/02_P-beta/platform/layouts/building.lay.php",
+		"/C/Users/rokdd/Documents/Eigene-Programmierungprojekte/web/02_P-beta/platform/core/init.core.php",
+		"/C/Users/rokdd/Documents/Eigene-Programmierungprojekte/web/02_P-beta/platform/pages/updates.pg.php",
+		"/C/Users/rokdd/Documents/Eigene-Programmierungprojekte/web/02_P-beta/platform/types/enum.typ.php",
+		"/C/Users/rokdd/Documents/Eigene-Programmierungprojekte/web/02_P-beta/platform/types/value.typ.php",
+		"/C/Users/rokdd/Documents/Eigene-Programmierungprojekte/web/02_P-beta/platform/pages/user.pg.php",
+		"/C/Users/rokdd/Documents/Eigene-Programmierungprojekte/web/02_P-beta/platform/types/user.meta.php",
+		"/C/Users/rokdd/Documents/Eigene-Programmierungprojekte/web/02_P-beta/platform/types/building.typ.php",
+		"/C/Users/rokdd/Documents/Eigene-Programmierungprojekte/web/02_P-beta/platform/types/room.typ.php",
+		"/C/Users/rokdd/Documents/Eigene-Programmierungprojekte/web/02_P-beta/platform/pages/building.pg.php",
+		"/C/Users/rokdd/Documents/Eigene-Programmierungprojekte/web/02_P-beta/platform/types/types.incl.php",
+		"/C/Users/rokdd/Documents/Eigene-Programmierungprojekte/web/02_P-beta/platform/fields/fields002.incl.php",
+		"/C/Users/rokdd/Documents/Eigene-Programmierungprojekte/web/02_P-beta/platform/types/field.typ.php",
+		"/C/Users/rokdd/Documents/Eigene-Programmierungprojekte/web/02_P-beta/platform/types/field.meta.php",
+		"/C/Users/rokdd/Documents/Eigene-Programmierungprojekte/web/02_P-beta/platform/types/enum.meta.php",
+		"/C/Users/rokdd/Documents/Eigene-Programmierungprojekte/web/02_P-beta/platform/types/place.meta.php"
+	],
+	"find":
+	{
+		"height": 31.0
+	},
+	"find_in_files":
+	{
+		"height": 638.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": false,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 31.0
+	},
+	"input":
+	{
+		"height": 202.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.SublimeLinter":
+	{
+		"height": 150.0
+	},
+	"output.exec":
+	{
+		"height": 150.0
+	},
+	"output.find_results":
+	{
+		"height": 303.0
+	},
+	"output.mdpopups":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "/C/Users/rokdd/Downloads/Download Steiner/proj.sublime-project",
+	"replace":
+	{
+		"height": 58.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"C:\\Users\\rokdd\\Documents\\Eigene-Programmierungprojekte\\web\\maba-dev.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 504.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 224.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
