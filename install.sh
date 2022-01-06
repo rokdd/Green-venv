@@ -29,5 +29,5 @@ $curl https://raw.githubusercontent.com/rokdd/green-venv/master/.bashrc.greenven
 grep -qxF '[ -f $HOME/.bashrc.greenvenv ] && . $HOME/.bashrc.greenvenv' ~/.bashrc || echo -e "\n#this line activate the green-venv\n[ -f \$HOME/.bashrc.greenvenv ] && . \$HOME/.bashrc.greenvenv" >> ~/.bashrc
 
 style_print "Installed the green virtual environment for you! Your shell gets reloaded now.." 'green'
-style_print "For help or getting started type 'greenvenv -h' or visit github.com/rokdd/green-venv"
+style_print "If cmd is not working reload the shell with 'exec \$SHELL'. For help or getting started type 'greenvenv -h' or visit github.com/rokdd/green-venv"
 exec $SHELL

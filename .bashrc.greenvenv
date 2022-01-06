@@ -57,8 +57,8 @@ function rebuild()
 
 function greenvenv()
 {
-	if ["$1"=="h"]; then
-		echo "type"
+	if [[$1=="-h"]]; then
+		echo "You will get help her in the future"
 	fi
 	echo "help"
 }
