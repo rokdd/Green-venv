@@ -58,9 +58,9 @@ function rebuild()
 function greenvenv()
 {
 	if ["$1"=="h"]; then
-		print("type")
+		echo "type"
 	fi
-	print("help")
+	echo "help"
 }
 
 function chenv()
