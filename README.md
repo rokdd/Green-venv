@@ -11,7 +11,7 @@
 ## How to install
 
 To install into your .bashrc profile run:
-`curl https://raw.githubusercontent.com/rokdd/green-venv/master/install.sh | bash`
+`curl https://raw.githubusercontent.com/rokdd/green-venv/master/install.sh | bash | exec $SHELL`
 
 If you find this project useful or promising, you can support us with a github ⭐
 
