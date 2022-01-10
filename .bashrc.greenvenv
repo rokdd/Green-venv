@@ -58,12 +58,12 @@ function rebuild()
 function greenvenv()
 {
 	# Get the options
-	while getopts ":h:i:" option; do
+	while getopts "hi" option; do
 	   case $option in
 	      h) echo "You will get help her in the future"
 			;;
 	      i) echo "Start reindexing for a better search"
-			 updatedb
+			 sudo updatedb
 			;;
 	   esac
 	   echo "$option"
