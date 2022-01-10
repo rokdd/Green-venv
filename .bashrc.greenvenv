@@ -57,10 +57,14 @@ function rebuild()
 
 function greenvenv()
 {
-	if [[$1=="-h"]]; then
+	if [[$1 == "-h"]]; then
 		echo "You will get help her in the future"
 	fi
-	echo "help"
+	if [[$1 == "--reindex"]]; then
+		echo "Start reindexing for a better search"
+		updatedb
+	fi
+	echo "help $1"
 }
 
 function chenv()
