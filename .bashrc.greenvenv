@@ -57,13 +57,18 @@ function rebuild()
 
 function greenvenv()
 {
-	if [["$1" == "-h"]]; then
-		echo "You will get help her in the future"
-	fi
-	if [["$1" == "--reindex"]]; then
-		echo "Start reindexing for a better search"
-		updatedb
-	fi
+	# Get the options
+	while getopts ":h" option; do
+	   case $option in
+	      h) echo "You will get help her in the future"
+	         exit;;
+	   case $option in
+	      i) echo "Start reindexing for a better search"
+			 updatedb
+	         exit;;
+	   esac
+	done
+
 	echo "help $1"
 }
 
