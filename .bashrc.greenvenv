@@ -61,10 +61,10 @@ function greenvenv()
 	while getopts ":h:i" option; do
 	   case $option in
 	      h) echo "You will get help her in the future"
-			return
+			return;;
 	      i) echo "Start reindexing for a better search"
 			 updatedb
-			return
+			return;;
 	   esac
 	done
 
