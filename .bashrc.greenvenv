@@ -58,7 +58,7 @@ function rebuild()
 function greenvenv()
 {
 	# Get the options
-	while getopts ":h" option; do
+	while getopts ":h:i" option; do
 	   case $option in
 	      h) echo "You will get help her in the future"
 	         exit;;
@@ -68,7 +68,7 @@ function greenvenv()
 	   esac
 	done
 
-	echo "help $1"
+	echo "Nothing done for $1 $option"
 }
 
 function chenv()
