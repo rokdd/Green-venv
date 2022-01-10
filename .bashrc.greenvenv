@@ -62,7 +62,6 @@ function greenvenv()
 	   case $option in
 	      h) echo "You will get help her in the future"
 	         exit;;
-	   case $option in
 	      i) echo "Start reindexing for a better search"
 			 updatedb
 	         exit;;
