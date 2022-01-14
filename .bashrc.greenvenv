@@ -58,15 +58,20 @@ function rebuild()
 function greenvenv()
 {
 	# Get the options
-	while getopts "hi" option; do
+	while getopts "hia" option; do
 	   case $option in
-	      h) echo "You will get help her in the future"
+	      h) echo "You will get help here in the future"
 			;;
 	      i) echo "Start reindexing for a better search"
-			 sudo updatedb
+			 updatedb
 			;;
-	   esac
-	   echo "$option"
+	      a) echo "This are the aliases (only correct after activate venv)"
+			greenvenv_loadconsts
+			greenvenv_loadalias
+			greenvenv_cleanup
+			;;
+	esac
+	 
 	done
 
 	echo "Nothing done for $1 $option"
@@ -97,6 +102,35 @@ select file in "${files[@]}"; do
 	fi
 done
 greenvenv_cleanup
+}
+
+
+function greenvenv_loadalias
+{
+	alias_restart="python ${file}manage.py makemigrations && python ${file}manage.py migrate && python ${file}manage.py collectstatic --no-input"
+			if [[ ! -z "$cmd_restart" ]]; then
+				alias_restart+=" && ${cmd_restart}"
+				
+				if [[ ! -z "$cmd_restart_beep" ]]; then 
+					alias_restart+=' && echo -e "\07" && echo -e "\007" '
+				fi
+			fi
+			alias restart="${alias_restart}"
+			echo "- Alias '${GREENVENV_CLR_BOLD}restart${GREENVENV_CLR_NORMAL}': migrate and restart django: ${alias_restart}\""
+			alias requirements="pip3 freeze > ${file}requirements.txt"
+			echo "- Alias '${GREENVENV_CLR_BOLD}requirements${GREENVENV_CLR_NORMAL}': export requirements.txt"
+			#check for other aliases
+			cat ${venv_cfg_filepath} | awk -F= '/^alias /{print $0}'  | while read line
+				do
+				    echo ${line:6} | \
+						  awk '{
+						    split($0,f,"=");
+						    sub(/^([^=]+=\s*)/,"",$0);
+						    print "- Alias \x27'${GREENVENV_CLR_BOLD}'"f[1]"'${GREENVENV_CLR_NORMAL}'\x27:"$0
+						  }'
+
+				done
+			echo "- More Aliases you can register directly in the pyvenv"
 }
 
 function chdjango()
@@ -139,30 +173,8 @@ select file in "${files[@]}"; do
 			greenvenv_print "- Activate $venv" GREENVENV_CLR_GREEN
 			
 			source "${venv}"/bin/activate
-			#cmd_restart=$(awk -F"=" '/^cmd_restart/{print $2}' ${venv_cfg_filepath})
-			#echo ">$cmd_restart<"
-			alias_restart="python ${file}manage.py makemigrations && python ${file}manage.py migrate && python ${file}manage.py collectstatic --no-input"
-			if [[ ! -z "$cmd_restart" ]]; then
-				alias_restart+=" && ${cmd_restart}"
-				
-				if [[ ! -z "$cmd_restart_beep" ]]; then 
-					alias_restart+=' && echo -e "\07" && echo -e "\007" '
-				fi
-			fi
-			alias restart="${alias_restart}"
-			echo "- Alias '${GREENVENV_CLR_BOLD}restart${GREENVENV_CLR_NORMAL}': migrate and restart django: ${alias_restart}\""
-			alias requirements="pip3 freeze > ${file}requirements.txt"
-			echo "- Alias '${GREENVENV_CLR_BOLD}requirements${GREENVENV_CLR_NORMAL}': export requirements.txt"
-			#check for other aliases
-			cat ${venv_cfg_filepath} | awk -F= '/^alias /{print $0}'  | while read line
-				do
-					OLDIFS="$IFS"
-					IFS="="
-					set -- $line
-					IFS="$OLDIFS"
-				    echo "- Alias '${GREENVENV_CLR_BOLD}${1:6}${GREENVENV_CLR_NORMAL}': $2"
-				done
-			echo "- More Aliases you can register directly in the pyvenv"
+
+			greenvenv_loadalias
 		else
 			greenvenv_print "$venv is not a directory or readable ${venv_cfg_filepath}" GREENVENV_CLR_RED
 		fi
