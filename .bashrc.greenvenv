@@ -122,6 +122,7 @@ function greenvenv_loadalias
 				echo "- Alias '${GREENVENV_CLR_BOLD}$cmd${GREENVENV_CLR_NORMAL}': migrate and restart django: ${aliase[$cmd]}[1]\""
 				alias $cmd="${aliase[$cmd]}[0]"
 			done
+			
 			#alias restart="${alias_restart}"
 			#echo "- Alias '${GREENVENV_CLR_BOLD}restart${GREENVENV_CLR_NORMAL}': migrate and restart django: ${alias_restart}\""
 			#echo "- Alias '${GREENVENV_CLR_BOLD}restart${GREENVENV_CLR_NORMAL}': migrate and restart django: ${alias_restart}\""
