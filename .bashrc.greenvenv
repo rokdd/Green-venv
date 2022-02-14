@@ -119,7 +119,7 @@ function greenvenv_loadalias
 			fi
 			aliase=( ['collectstatic']="python ${file}manage.py collectstatic --no-input" ['restart']="${alias_restart}" ['requirements']="pip3 freeze > ${file}requirements.txt")
 			for cmd in "${!aliase[@]}"; do
-				echo "- Alias '${GREENVENV_CLR_BOLD}$cmd${GREENVENV_CLR_NORMAL}': ${aliase[$cmd]}\""
+				echo "- Alias '${GREENVENV_CLR_BOLD}$cmd${GREENVENV_CLR_NORMAL}': \"${aliase[$cmd]}\""
 				alias $cmd="${aliase[$cmd]}"
 			done
 
