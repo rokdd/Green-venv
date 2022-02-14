@@ -119,12 +119,12 @@ function greenvenv_loadalias
 			fi
 			aliase=( ['collectstatic']="python ${file}manage.py collectstatic --no-input" ['restart']="${alias_restart}")
 			for cmd in "${!aliase[@]}"; do
-				printf '%s: %s\n' "$cmd" "${aliase[$cmd]}"
+				echo "- Alias '${GREENVENV_CLR_BOLD}$cmd${GREENVENV_CLR_NORMAL}': migrate and restart django: ${aliase[$cmd]}\""
 				alias $cmd="${aliase[$cmd]}"
 			done
-			alias restart="${alias_restart}"
-			echo "- Alias '${GREENVENV_CLR_BOLD}restart${GREENVENV_CLR_NORMAL}': migrate and restart django: ${alias_restart}\""
-			echo "- Alias '${GREENVENV_CLR_BOLD}restart${GREENVENV_CLR_NORMAL}': migrate and restart django: ${alias_restart}\""
+			#alias restart="${alias_restart}"
+			#echo "- Alias '${GREENVENV_CLR_BOLD}restart${GREENVENV_CLR_NORMAL}': migrate and restart django: ${alias_restart}\""
+			#echo "- Alias '${GREENVENV_CLR_BOLD}restart${GREENVENV_CLR_NORMAL}': migrate and restart django: ${alias_restart}\""
 			alias requirements="pip3 freeze > ${file}requirements.txt"
 			echo "- Alias '${GREENVENV_CLR_BOLD}requirements${GREENVENV_CLR_NORMAL}': export requirements.txt"
 			#check for other aliases
