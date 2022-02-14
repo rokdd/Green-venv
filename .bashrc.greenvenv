@@ -117,7 +117,7 @@ function greenvenv_loadalias
 					alias_restart+=' && echo -e "\07" && echo -e "\007" '
 				fi
 			fi
-			aliase=( ['collectstatic']='python ${file}manage.py collectstatic --no-input' ['restart']=alias_restart)
+			aliase=( ['collectstatic']='python ${file}manage.py collectstatic --no-input' ['restart']='${alias_restart}')
 			for cmd in "${!aliase[@]}"; do
 				printf '%s: %s\n' "$cmd" "${aliase[$cmd]}"
 				alias $cmd=${aliase[$cmd]}
