@@ -125,7 +125,6 @@ function greenvenv_loadalias
 			temp="${words#*=}"
 			temp="${temp%\"}"
 			temp="${temp#\"}"
-			print "${temp}"
 			aliase["${words%%=*}"]="${temp}"
 			done < <(cat ${venv_cfg_filepath} | awk -F= '/^alias (.*)/{print $0}')
 
