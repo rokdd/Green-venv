@@ -117,7 +117,7 @@ function greenvenv_loadalias
 					alias_restart+=' && echo -e "\07" && echo -e "\007" '
 				fi
 			fi
-			aliase=( ['collectstatic']="python ${file}manage.py collectstatic --no-input" ['restart']="${alias_restart}" ['requirements']="pip3 freeze > ${file}requirements.txt")
+			aliase=( ['collectstatic']="\"python ${file}manage.py collectstatic --no-input\"" ['restart']="\"${alias_restart}\"" ['requirements']="\"pip3 freeze > ${file}requirements.txt\"")
 
 
 			#alias restart="${alias_restart}"
@@ -134,8 +134,8 @@ function greenvenv_loadalias
 			done < <(cat ${venv_cfg_filepath} | awk -F= '/^alias (.*)/{print $0}')
 
 			for cmd in "${!aliase[@]}"; do
-				echo "- Alias '${GREENVENV_CLR_BOLD}$cmd${GREENVENV_CLR_NORMAL}': \"${aliase[$cmd]}\""
-				alias $cmd="${aliase[$cmd]}"
+				echo "- Alias '${GREENVENV_CLR_BOLD}$cmd${GREENVENV_CLR_NORMAL}': ${aliase[$cmd]}
+				alias $cmd=${aliase[$cmd]}
 			done
 			echo "- More Aliases you can register directly in the pyvenv"
 }
