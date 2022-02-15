@@ -131,7 +131,7 @@ function greenvenv_loadalias
 			while IFS= read -r  words; do                
 			words="${words:6}"
 			temp="${words#*=}"
-			temp="${opt%\"}"
+			temp="${temp%\"}"
 			temp="${temp#\"}"
 			aliase["${words%%=*}"]="$temp"
 			done < <(cat ${venv_cfg_filepath} | awk -F= '/^alias (.*)/{print $0}')
