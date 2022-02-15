@@ -126,25 +126,13 @@ function greenvenv_loadalias
 			#alias requirements="pip3 freeze > ${file}requirements.txt"
 			#echo "- Alias '${GREENVENV_CLR_BOLD}requirements${GREENVENV_CLR_NORMAL}': export requirements.txt"
 			#check for other aliases
-			cat ${venv_cfg_filepath} | awk -F= '/^alias /{print $0}'  | while read line
-				do
-				    echo ${line:6} | \
-						  awk '{
-						    split($0,f,"=");
-						    sub(/^([^=]+=\s*)/,"",$0);
 
-						    print "- Alias \x27'${GREENVENV_CLR_BOLD}'"f[1]"'${GREENVENV_CLR_NORMAL}'\x27:"$0
-						  }'
-					aliase+=($(${line:6} | \
-						  awk '{
-						    split($0,f,"=");
-						    sub(/^([^=]+=\s*)/,"",$0);
+			#parse aliases from the file pyvenv.cfg
+			while IFS= read -r  words; do                
+			words="${words:6}"
+			aliase["${words%%=*}"]="${words#*=}"    
+			done < <(cat ${venv_cfg_filepath} | awk -F= '/^alias (.*)/{print $0}')
 
-						    print f[1]=$0
-						  }')) 
-
-
-				done
 			for cmd in "${!aliase[@]}"; do
 				echo "- Alias '${GREENVENV_CLR_BOLD}$cmd${GREENVENV_CLR_NORMAL}': \"${aliase[$cmd]}\""
 				alias $cmd="${aliase[$cmd]}"
