@@ -24,10 +24,10 @@ style_print() {
 style_print "Start install.." 'gray'
 #alternative way to download should not be nessary
 #cd ~ && { $curl -O https://raw.githubusercontent.com/rokdd/green-venv/master/.bashrc.greenvenv; cd -; }
-$curl https://raw.githubusercontent.com/rokdd/green-venv/master/.bashrc.greenvenv > ~/.bashrc.greenvenv
+$curl --silent https://raw.githubusercontent.com/rokdd/green-venv/master/.bashrc.greenvenv > ~/.bashrc.greenvenv
 #add the line to the .bashrc
 grep -qxF '[ -f $HOME/.bashrc.greenvenv ] && . $HOME/.bashrc.greenvenv' ~/.bashrc || echo -e "\n#this line activate the green-venv\n[ -f \$HOME/.bashrc.greenvenv ] && . \$HOME/.bashrc.greenvenv" >> ~/.bashrc
 
 style_print "Installed the green virtual environment for you! Your shell gets reloaded now.." 'green'
-style_print "If cmd is not working reload the shell with 'exec \$SHELL'. For help or getting started type 'greenvenv -h' or visit github.com/rokdd/green-venv"
+style_print "If cmd is not working, reload the shell with 'exec \$SHELL'. For help or getting started type 'greenvenv -h' or visit github.com/rokdd/green-venv"
 exec $SHELL
