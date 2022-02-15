@@ -130,7 +130,7 @@ function greenvenv_loadalias
 			#parse aliases from the file pyvenv.cfg
 			while IFS= read -r  words; do                
 			words="${words:6}"
-			temp=${words#*=}
+			temp="${words#*=}"
 			temp="${opt%\"}"
 			temp="${temp#\"}"
 			aliase["${words%%=*}"]="$temp"
