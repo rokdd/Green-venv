@@ -117,7 +117,7 @@ function greenvenv_loadalias
 					alias_restart+=' && echo -e "\07" && echo -e "\007" '
 				fi
 			fi
-			aliase=( ['collectstatic']="\"python ${file}manage.py collectstatic --no-input\"" ['restart']="\"${alias_restart}\"" ['requirements']="\"pip3 freeze > ${file}requirements.txt\"")
+			aliase=( ['collectstatic']="python ${file}manage.py collectstatic --no-input" ['restart']="${alias_restart}" ['requirements']="pip3 freeze > ${file}requirements.txt")
 
 
 			#alias restart="${alias_restart}"
@@ -133,7 +133,7 @@ function greenvenv_loadalias
 			temp="${words#*=}"
 			temp="${temp%\"}"
 			temp="${temp#\"}"
-			print "$temp"
+			print "${temp}"
 			aliase["${words%%=*}"]="${temp}"
 			done < <(cat ${venv_cfg_filepath} | awk -F= '/^alias (.*)/{print $0}')
 
