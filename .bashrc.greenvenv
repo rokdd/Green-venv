@@ -58,7 +58,7 @@ function rebuild()
 function greenvenv()
 {
 	# Get the options
-	while getopts "hia" option; do
+	while getopts ":hia" option; do
 	   case $option in
 	      h)
 			echo "You will get help here in the future"
