@@ -24,7 +24,7 @@ style_print() {
 style_print "Start install.." 'gray'
 #alternative way to download should not be nessary
 #cd ~ && { $curl -O https://raw.githubusercontent.com/rokdd/green-venv/master/.bashrc.greenvenv; cd -; }
-$curl --silent https://raw.githubusercontent.com/rokdd/green-venv/master/.bashrc.greenvenv > ~/.bashrc.greenvenv
+$curl -H 'Cache-Control: no-cache' --silent https://raw.githubusercontent.com/rokdd/green-venv/master/.bashrc.greenvenv > ~/.bashrc.greenvenv
 #add the line to the .bashrc
 grep -qxF '[ -f $HOME/.bashrc.greenvenv ] && . $HOME/.bashrc.greenvenv' ~/.bashrc || echo -e "\n#this line activate the green-venv\n[ -f \$HOME/.bashrc.greenvenv ] && . \$HOME/.bashrc.greenvenv" >> ~/.bashrc
 
