@@ -132,7 +132,7 @@ function greenvenv_loadalias
 						  awk '{
 						    split($0,f,"=");
 						    sub(/^([^=]+=\s*)/,"",$0);
-						    aliase[["f[1]"]]="$0"
+						    aliase[[f[1]]]="$0"
 						    print "- Alias \x27'${GREENVENV_CLR_BOLD}'"f[1]"'${GREENVENV_CLR_NORMAL}'\x27:"$0
 						  }'
 
