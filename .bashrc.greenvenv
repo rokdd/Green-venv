@@ -61,15 +61,15 @@ function greenvenv()
 	while getopts "hia" option; do
 	   case $option in
 	      h) echo "You will get help here in the future"
-			;;
+			;
 	      i) echo "Start reindexing for a better search"
 			 updatedb
-			;;
+			;
 	      a) echo "This are the aliases (only correct after activate venv)"
 			greenvenv_loadconsts
 			greenvenv_loadalias
 			greenvenv_cleanup
-			;;
+			;
 	esac
 	 
 	done
@@ -176,7 +176,7 @@ select file in "${files[@]}"; do
 			source "${venv}"/bin/activate
 
 			greenvenv_loadalias
-			
+
 		else
 			greenvenv_print "$venv is not a directory or readable ${venv_cfg_filepath}" GREENVENV_CLR_RED
 		fi
