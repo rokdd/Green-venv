@@ -44,37 +44,62 @@ done
 
 function rebuild()
 {
-	return
+	greenvenv_loadconsts
+	echo $VIRTUAL_ENV
 	greenvenv_venvpath=$VIRTUAL_ENV
-	pip3 freeze > /tmp/requirements.txt
+	greenvenv_temp="tmp-requirements-$(echo $VIRTUAL_ENV | sed -e 's/[^A-Za-z0-9._-]/-/g').txt"
+	echo $greenvenv_temp
+	# first we remove to be sure that it is really new result
+	#rm $greenvenv_temp
+	$greenvenv_venvpath/bin/python -m pip freeze > $greenvenv_temp
+	if [[  -z $greenvenv_temp ]]; then
+		greenvenv_print 'Something did not work. Requirements not found or you installed nothing.' GREENVENV_CLR_RED
+		
+		return
+	fi
 	deactivate
 	echo $greenvenv_venvpath
+	echo "SOOORRY here we need to some work for the future, to let you create a venv"
+	return
 	mv $greenvenv_venvpath "${greenvenv_venvpath}.backup"
 	#virtualenv -p python3 name
 	#python3 -m venv /path/to/new/virtual/environment
 	pip install -r /tmp/requirements.txt
+	rm $greenvenv_temp
 }
 
 function greenvenv()
 {
 	# Get the options
-	while getopts ":h::i::a::" option; do
-	   case "$option" in
-	      h)
+	TEMP=$(getopt  :hiar "$@")
+	eval set -- "$TEMP"
+	while true ; do
+	   case "$1" in
+	      -h)
 			echo "You will get help here in the future"
+			break
 			;;
-	      i)
+	      -i)
 			echo "Start reindexing for a better search"
 			 updatedb
+			 break
 			;;
-	      a)
+	      -r)
+			echo "Start rebuilding the env: 1 rename -> 2 new with same name $2"
+			 rebuild
+			 break
+			;;
+	     -a)
 			echo "This are the aliases (only correct after activate venv)"
 			greenvenv_loadconsts
 			greenvenv_loadalias
+			break
 			;;
 	      *)
-			echo "Nothing done for $1 $option"		
-			;;
+			echo "Nothing done for $1 $option"	
+			break ;;	
+			
+		--) shift ; break ;;
 	esac
 	 
 	done
