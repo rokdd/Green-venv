@@ -46,6 +46,10 @@ function rebuild()
 {
 	greenvenv_loadconsts
 	echo $VIRTUAL_ENV
+	if [ ! "$(type -t deactivate)" = "function" ]; then
+		greenvenv_print 'Are you sure you properly activated the env?' GREENVENV_CLR_RED
+		return
+	fi
 	greenvenv_venvpath=$VIRTUAL_ENV
 	greenvenv_temp="tmp-requirements-$(echo $VIRTUAL_ENV | sed -e 's/[^A-Za-z0-9._-]/-/g').txt"
 	echo $greenvenv_temp
